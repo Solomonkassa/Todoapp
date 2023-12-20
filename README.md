@@ -5,7 +5,7 @@ Welcome to the Django Todo App! This application is designed to help you efficie
 ## Features
 [DEMO](https://django-todo-app-xszx.onrender.com/).
 ### 1. Create Tasks
-![Create Task](https://github.com/Solomonkassa/Django-Todo-app/raw/main/Assets/27.10.2023_15.45.34_REC.png)
+![Create Task](https://github.com/Solomonkassa/Todoapp/raw/main/Assets/27.10.2023_15.45.34_REC.png)
 You can easily create new tasks with this app. Each task includes the following details:
 
 - **Title:** A brief description of the task.
