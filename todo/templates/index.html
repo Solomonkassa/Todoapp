@@ -1,0 +1,104 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>ToDo App</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="{% static 'bs/css/flatly.min.css' %}" />
+    <link rel="stylesheet" href="{% static 'styles.css' %}" />
+</head>
+
+<body>
+
+    <div class="container-fluid" id="wrapper">
+        <div class="row">
+            <div class="col-lg-4 col-lg-offset-4" id="content">
+                <h2>እቅድ መተግበሪያ</h2>
+
+                <form action="{%  url 'addTodo' %}" method="POST" role="form">
+                    {% csrf_token %}
+                    <div class="form-group">
+                        <div class="input-group">
+                            {{ form.text }}
+                            <span class="input-group-btn">
+                                <button type="submit" class="btn btn-custom" id="add-btn">ጨምር</button>
+                            </span>
+                        </div>
+                    </div>
+                </form>
+                <form action="{% url 'search' %}" method="GET" role="form">
+                    <div class="form-group">
+                        <div class="input-group">
+                            <input type="text" name="search_text" class="form-control" placeholder="ፈልግ...">
+                            <span class="input-group-btn">
+                                <button type="submit" class="btn btn-custom" id="add-btn">ፈልግ</button>
+                            </span>
+                        </div>
+
+                    </div>
+                </form>
+
+                <div class="row t10">
+                    <div class="col-lg-12">
+                        <div class="btn-toolbar">
+                            <div class="btn-group">
+                                <a href="{% url 'deletecompleted' %}">
+                                    <button type="button" class="btn btn-custom">
+                                        <i class="glyphicon glyphicon-trash">የተጠናቀቀውን ደምስስ</i>
+                                    </button>
+                                </a>
+                            </div>
+                            <div class="btn-group">
+                                <a href="{% url 'deleteall' %}">
+                                    <button type="button" class="btn btn-custom">
+                                        <i class="glyphicon glyphicon-trash">ሁሉንም ደምስስ</i>
+                                    </button>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <ul class="list-group t20">
+                    {% if todo_list %}
+                    {% for todo in todo_list %}
+                    {% if todo.complete %}
+                    <li class="list-group-item todo-completed">
+                        {{ todo.text }}
+                        <a href="{% url 'uncomplete' todo.id %}" class="space-right">ቀልብስ</a>
+                    </li>
+                    {% else %}
+                    <li class="list-group-item">
+                        {{ todo.text }}
+                        <a href="{% url 'complete' todo.id %}" class="space-right">ተጠናቀቀ</a>
+                    </li>
+                    {% endif %}
+                    {% endfor %}
+                    {% else %}
+                    <li class="list-group-item">ምንም እቅድ የለም</li>
+                    {% endif %}
+                </ul>
+
+            </div>
+        </div>
+
+        <footer>
+            <div class="row pad">
+                <div class="col-lg-12 text-center">
+                    Copyright &copy; 2023 <strong><a href="https://github.com/SolomonKassa" target="_blank"
+                            style="color: white;">Solomon Kassa</a></strong>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+</body>
+
+</html>
