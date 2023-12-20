@@ -15,24 +15,24 @@ You can easily create new tasks with this app. Each task includes the following 
 - **Photo Attachments:** Attach photos to provide additional context or visual aids for the task.
 
 ### 2. Update Tasks
-![Create Task](https://github.com/Solomonkassa/Django-Todo-app/blob/main/Assets/27.10.2023_15.57.12_REC.png)
+![Create Task](https://github.com/Solomonkassa/Todoapp/blob/main/Assets/27.10.2023_15.57.12_REC.png)
 Tasks are dynamic. You can update them at any time. Edit the title, description, due date, priority, and even add or remove photo attachments to keep your tasks up-to-date.
 
 ### 3. Delete Tasks
-![Create Task](https://github.com/Solomonkassa/Django-Todo-app/blob/main/Assets/27.10.2023_15.55.24_REC.png)
+![Create Task](https://github.com/Solomonkassa/Todoapp/blob/main/Assets/27.10.2023_15.55.24_REC.png)
 If a task is no longer relevant, you can delete it. The app provides a simple way to remove unwanted tasks from your list.
 
 ### 4. Read Task Details
-![Create Task](https://github.com/Solomonkassa/Django-Todo-app/blob/main/Assets/27.10.2023_15.52.39_REC.png)
+![Create Task](https://github.com/Solomonkassa/Todoapp/blob/main/Assets/27.10.2023_15.52.39_REC.png)
 You can view the complete details of each task. This includes the title, description, due date, priority, and attached photos, giving you a comprehensive overview of what each task entails.
 
 ### 5. Mark Completed Tasks
-![Create Task](https://github.com/Solomonkassa/Django-Todo-app/blob/main/Assets/27.10.2023_15.55.24_REC.png)
+![Create Task](https://github.com/Solomonkassa/Todoapp/blob/main/Assets/27.10.2023_15.55.24_REC.png)
 
 Once you've completed a task, mark it as done with just a click. Completed tasks are visually distinguished from open ones for clarity.
 
 ### 6. Search with Photo Attachments
-![Create Task(](https://github.com/Solomonkassa/Django-Todo-app/blob/main/Assets/27.10.2023_15.58.21_REC.png)
+![Create Task(](https://github.com/Solomonkassa/Todoapp/blob/main/Assets/27.10.2023_15.58.21_REC.png)
 Finding tasks with specific photo attachments is a breeze. Use the search feature to filter and locate tasks by their attached images. This is especially useful for tasks that require visual reference.
 
 ## Technologies Used
